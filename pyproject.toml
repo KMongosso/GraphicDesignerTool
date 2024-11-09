@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "graphic-designer-tool"
+version = "0.1.0"
+description = "Graphic Designer tool to facilitate logo creation"
+repository = "https://github.com/KMongosso/GraphicDesignerTool"
+authors = ["Karl Mongosso <karl.mongosso@gmail.com>"]
+packages = [
+    { include = "graphic_designer_tool", from = "src" },
+]
+license = "Proprietary"
+readme = "README.md"
+
+[tool.poetry.scripts]
+graphic-designer-tool = "graphic_designer_tool.main:main"
+
+# DEPENDENCIES
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter = "^1.1.1"
+openai = "^1.53.0"
+gradio = "^5.4.0"
+
+[tool.poetry.group.checkers.dependencies]
+bandit = "^1.7.8"
+black = "^22.10.0"
+isort = "^5.10.1"
+coverage = "^6.5.0"
+mypy = "1.10.0"
+pandera = "^0.13.4"
+pylint = "^3.2.3"
+pytest = "^7.1.3"
+pytest-cov = "^4.0.0"
+pytest-xdist = "^3.0.2"
+pytest-mock = "^3.14.0"
+
+[tool.pylint]
+disable = [
+    "no-name-in-module",
+    "too-few-public-methods",
+    "duplicate-code",
+]

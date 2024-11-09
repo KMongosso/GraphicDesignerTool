@@ -1,0 +1,4 @@
+image_model: "dall-e-3"
+n_image: 1
+image_dim: "1024x1024"
+image_quality: "standard"
